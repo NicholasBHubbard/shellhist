@@ -2,6 +2,8 @@
 
 shellhist is a package for saving the history of shell commands you enter into `M-x shell`. This history is global across all `M-x shell` buffers, and is saved across Emacs sessions. You can prevent commands from being added to the history through the use of filters in the `shellhist-filters` list.
 
+To start saving your command history, just turn on `shellhist-mode`.
+
 # Functions
 
 #### shellhist-history-search
