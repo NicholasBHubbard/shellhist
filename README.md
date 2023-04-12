@@ -10,9 +10,7 @@ Search your shell history with `completing-read`, and insert the selection into 
 
 # Variables
 
-#### shellhist-filters
-
-Defaults to `'(string-blank-p)`
+#### shellhist-filters (defaults to `(list #'string-blank-p')`)
 
 A list of strings and functions that are used as filters to prevent inputs from entering the shell history.
 
@@ -20,21 +18,15 @@ Members of `shellhist-filters` that are strings are interpreted as regexs. If th
 
 Members of `shellhist-filters` that are functions should take a single argument representing input command. If the function returns a non-nil value when applied to the input command, then the command is not entered into the shell history.
 
-#### shellhist-ltrim
-
-Defaults to `t`.
+#### shellhist-ltrim (defaults to `t`)
 
 If non-nil, then all whitespace (including newlines) is removed from the left side of the input command. Note that trimming takes place before the input command is passed through the filters in `shellhist-filters`.
 
-#### shellhist-rtrim
-
-Defaults to `t`.
+#### shellhist-rtrim (defaults to `t`)
 
 If non-nil, then all whitespace (including newlines) is removed from the right side of the input command. Note that trimming takes place before the input command is passed through the filters in `shellhist-filters`.
 
-#### shellhist-max-hist-size
-
-Defaults to 500
+#### shellhist-max-hist-size (defaults to 500)
 
 The maximum number of commands to keep in the shell history.
 
