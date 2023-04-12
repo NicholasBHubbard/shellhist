@@ -45,6 +45,6 @@ Here is an example function that disables sorting for `vertico`, `ivy`, `selectr
         (vertico-sort-override-function nil)
         (vertico-prescient-enable-sorting nil)
         (selectrum-should-sort nil)
-        (selectrum-prescient-enable-sorting t))
+        (selectrum-prescient-enable-sorting nil))
     (shellhist-history-search)))
 ```
