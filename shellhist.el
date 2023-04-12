@@ -35,11 +35,11 @@
 (defvar shellhist-rtrim t
   "T if whitespace should be trimmed from right side of input before processing.")
 
-(defvar shellhist-filters (list 'string-blank-p)
+(defvar shellhist-filters (list #'string-blank-p)
   "List of filters for preventing entries into `shellhist--history'.
 
-These filters can be strings or functions. If a filter is a string then it is
-interpreted as a regexp, and will filter input that matches the regexp. If a
+These filters can be strings or functions.  If a filter is a string then it is
+interpreted as a regexp, and will filter input that matches the regexp.  If a
 filter is a function then it will filter input that when applied to it, returns
 a non-nil value.")
 
@@ -94,7 +94,7 @@ If any input already exists in the shell input buffer, then it is deleted
 before inserting the selected value."
   (interactive)
   (let ((history-val (completing-read "Shell History: " shellhist--history)))
-    (end-of-buffer)
+    (goto-char (point-max))
     (delete-region (line-beginning-position) (line-end-position))
     (insert history-val)))
 
