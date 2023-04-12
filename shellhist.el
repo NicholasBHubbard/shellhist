@@ -8,11 +8,11 @@
 
 ;; Author: Nicholas Hubbard <nicholashubbard@posteo.net>
 ;; URL: https://github.com/NicholasBHubbard/shellhist
-;; Package-Requires: ((emacs "24.4"))
+;; Package-Requires: ((emacs "25.1"))
 ;; Version: 1.0
 ;; Created: 2023-02-22
 ;; By: Nicholas Hubbard <nicholashubbard@posteo.net>
-;; Keywords: shell
+;; Keywords: convenience
 
 ;;; Commentary:
 
@@ -132,6 +132,8 @@ before inserting the selected value."
         (add-hook 'kill-emacs-hook #'shellhist--save))
     (advice-remove 'comint-send-input #'shellhist--process-input)
     (remove-hook 'kill-emacs-hook #'shellhist--save)))
+
+(provide 'shellhist)
 
 ;; Local Variables:
 ;; indent-tabs-mode: nil
