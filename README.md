@@ -16,7 +16,7 @@ A list of strings and functions that are used as filters to prevent inputs from 
 
 Members of `shellhist-filters` that are strings are interpreted as regexs. If the regex matches the input command, then the command is not entered into the shell history.
 
-Members of `shellhist-filters` that are functions should take a single argument representing input command. If the function returns a non-nil value when applied to the input command, then the command is not entered into the shell history.
+Members of `shellhist-filters` that are functions should take a single argument representing the input command. If the function returns a non-nil value when applied to the input command, then the command is not entered into the shell history.
 
 #### shellhist-ltrim - defaults to `t`
 
