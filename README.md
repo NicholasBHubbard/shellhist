@@ -6,7 +6,7 @@ shellhist is a package for saving the history of shell commands you enter into `
 
 #### shellhist-history-search
 
-Search your shell history with `completing-read`, and insert the selection into the `M-x shell` input buffer. It is recommended that you bind this function to a key in `shell-mode-map` (I personally bind it to `C-r`).
+Search your shell history with `completing-read`, and insert the selection into the `M-x shell` input buffer. If there is any text already in the shell input buffer it is removed. It is recommended that you bind this function to a key in `shell-mode-map` (I personally bind it to `C-r`).
 
 # Variables
 
