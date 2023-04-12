@@ -10,7 +10,7 @@ Search your shell history with `completing-read`, and insert the selection into 
 
 # Variables
 
-#### shellhist-filters - defaults to `(list #'string-blank-p')`
+#### shellhist-filters - defaults to `(list #'string-blank-p)`
 
 A list of strings and functions that are used as filters to prevent inputs from entering the shell history.
 
