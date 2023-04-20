@@ -20,6 +20,9 @@
 
 ;;; Code:
 
+(require 'comint)
+(require 'subr-x)
+
 (defvar shellhist--history nil
   "The shellhist history list.")
 
