@@ -24,21 +24,21 @@
 
 ;; By default, all M-x shell input is added into the `shellhist--history'
 ;; (excluding blank entries), however the user can add filters to
-;; `shellhist-filters' that prevent items from entering the history.  Filters can
-;; either be strings or functions.  String filters are interpreted as regexs such
+;; `shellhist-filters' that prevent items from entering the history. Filters can
+;; either be strings or functions. String filters are interpreted as regexs such
 ;; that if the input matches the regex then it is not added to the history.
 ;; Function filters are functions that should take the input as an argument such
 ;; that if the function returns a non-nil value then the input is not added to
-;; the history.  Duplicate items are automatically removed from the history (by
-;; removing the old duplicate and keeping the new one).  The input history is
+;; the history. Duplicate items are automatically removed from the history (by
+;; removing the old duplicate and keeping the new one). The input history is
 ;; saved to a file so it can persist across Emacs sessions.
 
 ;; It is important to note that the `shellhist--history' is global (as opposed
-;; to buffer-local).  This means that all M-x shell buffers share their history.
+;; to buffer-local). This means that all M-x shell buffers share their history.
 
 ;; The interactive function `shellhist-history-search' is provided for selecting
 ;; a history item with `completing-read', and inserting it into the M-x shell
-;; input area.  It is recommended to bind this function to some key in
+;; input area. It is recommended to bind this function to some key in
 ;; `shell-mode-map'.
 
 ;;; Code:
