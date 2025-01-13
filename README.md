@@ -36,7 +36,7 @@ If non-nil, then all whitespace (including newlines) is removed from the right s
 
 The maximum number of commands to keep in the shell history.
 
-# Be Careful Of Completion Sorting
+# Careful With Completion Sorting
 
 You almost certainly want the shell history sorted from most recent to oldest entries when browsing with `shellhist-history-search`. Your completion system may mess with this ordering, in which case you should wrap `shellhist-history-search` in a function that disables the sorting.
 
